@@ -3,6 +3,9 @@ bin-debug/
 bin-release/
 [Oo]bj/
 [Bb]in/
+venv
+.ipynb_checkpoints
+.vscode
 
 # Other files and folders
 .settings/
