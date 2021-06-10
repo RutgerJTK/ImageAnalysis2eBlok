@@ -3,3 +3,6 @@
 jupyter
 runipy
 findspark
+numpy
+pandas
+matplotlib
