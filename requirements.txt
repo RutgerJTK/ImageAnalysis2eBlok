@@ -1,8 +1,6 @@
-# tensorflow
-# matplotlib
-jupyter
-runipy
-findspark
-numpy
-pandas
-matplotlib
+jupyter==1.0.0
+runipy==0.1.5
+findspark==1.4.2
+numpy==1.20.3
+pandas==1.2.4
+matplotlib==3.4.2

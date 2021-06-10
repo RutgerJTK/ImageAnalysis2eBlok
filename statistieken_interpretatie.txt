@@ -1,4 +1,0 @@
-De determinatiecoëfficiënt geeft aan in hoeverre er correlatie is tussen variabelen.
-In statistische modellen wordt dit gebruikt om aan te geven hoe vaak het model de waarden goed voorspeld, door de afwijking in voorspellingen weer te geven.
-Hierin is 1 de beste waarde, en ons model heeft een waarde van 0,788.
-De waarde wordt als significant beschouwd vanaf 0,50, wat betekend dat ons model vaak genoeg goed voorspeld om als significant goed te worden beschouwd.
