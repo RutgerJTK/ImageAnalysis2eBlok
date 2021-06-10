@@ -1,4 +1,5 @@
-tensorflow
-matplotlib
+# tensorflow
+# matplotlib
 jupyter
 runipy
+findspark

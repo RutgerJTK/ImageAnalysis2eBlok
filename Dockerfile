@@ -2,7 +2,7 @@
 FROM ubuntu
 
 # Setting up the enviroment
-RUN apt-get -o Acquire::Check-Valid-Until=false -o Acquire::Check-Date=false update
+RUN apt-get -o Acquire::Check-Valid-Until=false -o Acquire::Check-Date=false update && apt-get install -y --no-install-recommends apt-utils
 RUN apt install -y wget
 RUN apt install -y python3.8
 RUN apt-get install -y python3-pip
@@ -11,8 +11,14 @@ RUN apt-get install -y python3-pip
 WORKDIR /app
 
 COPY requirements.txt /app/requirements.txt
-COPY guide.ipynb /app/guide.ipynb
+COPY mllib-hadoop.ipynb /app/mllib-hadoop.ipynb
 
 RUN pip install -r requirements.txt
 
-CMD ["runipy", "guide.ipynb"]
+# Specifiek aan dit project
+RUN apt-get -y install openjdk-11-jdk
+RUN wget -q https://downloads.apache.org/spark/spark-3.1.1/spark-3.1.1-bin-hadoop2.7.tgz
+RUN tar -xvf spark-3.1.1-bin-hadoop2.7.tgz
+RUN pip install -q findspark
+
+CMD ["runipy", "mllib-hadoop.ipynb"]
